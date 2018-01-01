@@ -1,0 +1,23 @@
+{
+  "name": "signiuof",
+  "version": "1.0.1",
+  "description": "A modulo in node to create the request to login",
+  "main": "index.js",
+  "scripts": {
+    "start": "node copyFiles",
+    "test": "echo 'done'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MRCardoso/signiuof.git"
+  },
+  "keywords": [
+    "passport"
+  ],
+  "author": "MRCardoso",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MRCardoso/signiuof/issues"
+  },
+  "homepage": "https://github.com/MRCardoso/signiuof#readme"
+}
