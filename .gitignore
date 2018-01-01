@@ -1,1 +1,5 @@
 signiuof.json
+npm-publish.sh
+node_modules/*
+package-lock.json
+repo-create.sh
