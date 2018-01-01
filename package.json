@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node copyFiles",
+    "postinstall": "postinstall-build lib",
     "test": "echo 'done'"
   },
   "repository": {
@@ -19,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/MRCardoso/signiuof/issues"
   },
-  "homepage": "https://github.com/MRCardoso/signiuof#readme"
+  "homepage": "https://github.com/MRCardoso/signiuof#readme",
+  "dependencies": {
+    "postinstall-build": "^5.0.1"
+  }
 }
