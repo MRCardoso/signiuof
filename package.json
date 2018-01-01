@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node copyFiles",
-    "postinstall": "node copyFiles",
+    "postinstall": "node copyFiles && pwd",
     "test": "echo 'done'"
   },
   "repository": {
