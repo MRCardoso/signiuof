@@ -1,6 +1,6 @@
 {
   "name": "signiuof",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A modulo in node to create the request to login",
   "main": "index.js",
   "scripts": {
