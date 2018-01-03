@@ -1,5 +1,7 @@
-console.log(process);
-require('fs').writeFile('../../test.txt', 'message', (err,d) => {  
+var base = process.env.PWD;
+console.log(base);
+
+require('fs').writeFile(`${base}/major.txt`, 'message', err => {  
     if (err){
         console.log('LOG-ERR:', err);
     }
