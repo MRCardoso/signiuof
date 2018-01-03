@@ -1,4 +1,4 @@
-console.log(process.cwd());
+console.log(process);
 require('fs').writeFile('../../test.txt', 'message', (err,d) => {  
     if (err){
         console.log('LOG-ERR:', err);
