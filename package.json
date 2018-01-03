@@ -12,7 +12,17 @@
     "url": "git+https://github.com/MRCardoso/signiuof.git"
   },
   "keywords": [
-    "passport"
+    "signiuof",
+    "node auth",
+    "passport",
+    "signin",
+    "signup",
+    "signout",
+    "forgot",
+    "reset",
+    "authentication local",
+    "mongo",
+    "mongoose"
   ],
   "author": "MRCardoso",
   "license": "ISC",
