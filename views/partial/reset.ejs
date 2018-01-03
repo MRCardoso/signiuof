@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col-md-3">
+        <a href="<%routes.signin%>">
+            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        </a>
+    </div>
+    <div class="col-md-9">
+        <h4><%=title%></h4>
+    </div>
+</div>
+<form action="<%=routes.reset.replace(':token', data['token'])%>" method="post" class="form-horizontal">
+    <div class="form-group">
+        <div class="col-md-12">
+            <div class="input-group">
+                <span role="button" class="input-group-addon ico-password"><i class="fa fa-eye-slash"></i></span>
+                <input type="password" name="password" class="form-control input-lg item-form" placeholder="Senha">
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-12">
+            <div class="input-group">
+                <span role="button" class="input-group-addon ico-password"><i class="fa fa-eye-slash"></i></span>
+                <input type="password" name="confirmation" class="form-control input-lg item-form" placeholder="Confirmação de Senha">
+            </div>
+        </div>
+    </div>
+    <div class="button-group">
+        <input type="submit" value="Restaurar Senha" style="width: 100%" class="btn btn-blue-inverse">
+    </div>
+</form>

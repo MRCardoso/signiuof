@@ -1,0 +1,45 @@
+<h3 class="breadcrumb text-center">
+    <%=title%>
+</h3>
+<form action="<%=routes.signup%>" method="post" class="form-horizontal">
+    
+    <div class="form-group">
+        <div class="col-md-12">
+            <input type="text" name="username" value="<%= data.username %>" placeholder="Usuário" class="form-control">
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <div class="col-md-12">
+            <input type="password" name="password" placeholder="Senha" class="form-control">
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <div class="col-md-12">
+            <input type="text" name="firstName" value="<%= data.firstName %>" placeholder="Nome" class="form-control">
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <div class="col-md-12">
+            <input type="text" name="lastName" value="<%= data.lastName %>" placeholder="SobreNome" class="form-control">
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <div class="col-md-12">
+            <input type="text" name="email" value="<%= data.email %>" placeholder="E-mail" class="form-control">
+        </div>
+    </div>    
+
+    <input type="submit" value="Criar Conta" style="width: 100%" class="btn btn-blue-inverse">
+</form>
+
+<div class="clear"><br></div>
+
+<div class="signin-option">
+    <div class="signin-option-item">
+        <a href="<%=routes.signin%>" class="grey-text">Fazer Login</a>
+    </div>
+</div>

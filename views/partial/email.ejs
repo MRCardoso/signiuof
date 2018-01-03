@@ -1,0 +1,20 @@
+<div class="breadcrumb signin-email">
+    <a href="<%=routes.signin%>">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+    </a>
+    <span><%=title%></span>
+</div>
+<form action="/<%=routes.forgot%>" method="post" class="form-horizontal">
+    <div class="form-group">
+        <div class="col-md-12">
+            <div class="input-group">
+                <span class="input-group-addon">@</span>
+                <input type="text" name="email" data-id="email" class="form-control input-lg item-form" placeholder="E-mail">
+            </div>
+        </div>
+    </div>
+
+    <div class="button-group">
+        <input type="submit" value="Enviar Token" style="width: 100%" class="btn btn-blue-inverse">
+    </div>
+</form>

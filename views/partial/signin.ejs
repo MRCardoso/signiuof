@@ -1,0 +1,35 @@
+<h3 class="breadcrumb text-center">
+    <%=title%>
+</h3>
+<form action="<%=routes.signin%>" method="post" class="form-horizontal">
+    <div class="form-group">
+        <div class="col-md-12">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                <input type="text" name="username" data-id="username" autofocus class="form-control input-lg item-form" placeholder="Usuário">
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-12">
+            <div class="input-group">
+                <span role="button" class="input-group-addon ico-password"><i class="fa fa-eye-slash"></i></span>
+                <input type="password" name="password" class="form-control input-lg item-form" placeholder="Senha">
+            </div>
+        </div>
+    </div>                
+    <div class="button-group">
+        <input type="submit" value="Acessar" style="width: 100%" class="btn btn-blue-inverse">
+    </div>
+</form>
+
+<div class="clear"><br></div>
+
+<div class="signin-option">
+    <div class="signin-option-item">
+        <a href="<%=routes.forgot%>" class="grey-text">Esqueceu a senha?</a>
+    </div>
+    <div class="signin-option-item">
+        Novo por aqui? <a href="<%=routes.signup%>" class="grey-text">Crie uma conta</a>
+    </div>
+</div>
