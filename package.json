@@ -4,8 +4,7 @@
   "description": "A modulo in node to create the request to login",
   "main": "index.js",
   "scripts": {
-    "start": "node copyFiles",
-    "postinstall": "node copyFiles && pwd && cp copyFiles.js ../../copyFiles.js",
+    "postinstall": "cp -a views/ ../../app",
     "test": "echo 'done'"
   },
   "repository": {
