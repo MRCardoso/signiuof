@@ -1,4 +1,4 @@
-var base = process.env.PWD;
+var base = process.env.INIT_PWD;
 console.log(base);
 
 require('fs').writeFile(`${base}/major.txt`, 'message', err => {  
