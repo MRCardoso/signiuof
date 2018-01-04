@@ -111,7 +111,7 @@ app.route('/api/users').get(iuof.middlewares.requireLogin, user.list);
 ## statics(used in the instance of the model User)
 
 ### E.g
-```
+```javascript
 let User = require('mongoose').model('User');
 // use arrow function
 User.findByEmail('email@test.com', (err, user) => console.log(err, user));
@@ -139,7 +139,7 @@ User.findByEmail('email@test.com', (err, user) => console.log(err, user));
 ## methods(use in the object of the model)
 
 ### E.g
-```
+```javascript
 let User = require('mongoose').model('User');
 // use arrow function
 User.findByEmail('email@test.com', (err, user) => {
