@@ -91,3 +91,85 @@ The default middlewares use in the package and available for your application to
 ```javascript
 app.route('/api/users').get(iuof.middlewares.requireLogin, user.list);
 ```
+
+## User(default model)
+* **Fields:**
+    * **name:** The full name of the user
+    * **email:** The email address of the user
+    * **username:**(required) The username to auth in app
+    * **password:**(required) The password the auth in app
+    * **status:** (default true) The status of the user in app
+    * **image:** The profile image of the user(is an Object when data of the image)
+    * **authToken:** The token to authenticate in app by jwt(JSON WEB TOKEN)
+    * **authTokenExpires:** The expires date of the authToken
+    * **resetToken:** The token to reset the password
+    * **resetExpires:** The expires date of the resetToken
+    * **created:** (default Date.now())The date of the creating of this user
+    
+## Custom methods
+
+## statics(used in the instance of the model User)
+
+### E.g
+```
+let User = require('mongoose').model('User');
+// use arrow function
+User.findByEmail('email@test.com', (err, user) => console.log(err, user));
+```
+
+* **findAndAuthenticate:** Find a user by username and validate password in hash
+    * **credentials:** (object) The list of the credentials to find
+    * **credentials.username:** (string) The username to be found
+    * **credentials.password:** (string) The passowrd to be found
+    * **next:** (function) The callback function called when success and fail
+
+* **findByToken:** Find a user by your token to auth in the app
+    * **token:** (string) The token of the user
+    * **next:** (function) The callback function called when success and fail
+
+* **findByEmail:**
+    * **email:** (string) The email of the user
+    * **next:** (function) The callback function called when success and fail
+
+* **findByResetToken:** Find a user by your reset token
+    * **token:** (string) the token to be load the user
+    * **expires:**(int) the expires date
+    * **next:** (function) The callback function called when success and fail
+    
+## methods(use in the object of the model)
+
+### E.g
+```
+let User = require('mongoose').model('User');
+// use arrow function
+User.findByEmail('email@test.com', (err, user) => {
+    if(!err) throw err;
+    
+    user.authenticate('passwdtest', isMatch => console.log( isMatch ? 'valid': 'invalid'));
+})
+```
+
+* **authenticate:** Method to verify if the password is valid
+    * **password:** (string) The password of the user
+    * **next:** (function) The callback function called when success and fail
+
+* **updateToken:** Update the token and expires date of the load user
+    * **token:** (string) The token to be save of the load user
+    * **expires:** (int) The data of expiration for this token
+    * **next:** (function) The callback function called when success and fail
+    
+* **updateResetToken:** Update the reset password token and expires date of the load user
+    * **next:** (function) The callback function called when success and fail
+    
+* **updatePasswd:** Update the Password of a load user
+    * **credentials:** (object) The list of the credentials to find
+    * **credentials.password:** (string) The password to be updated
+    * **credentials.confirmation:** (string) The password confirmation
+    * **next:** (function) The callback function called when success and fail
+   
+* **setFillables:** Fill the fields of the model(availables name, email, username and status)
+    * **post:** (object) The object with the post data to be updated
+    * **post.username:** (string) The username to be update
+    * **post.status:** (string) The status to be update
+    * **post.name** (string) The name to be update
+    * **post.email** (string) The email to be update
