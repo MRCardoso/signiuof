@@ -5,7 +5,9 @@ When this package is installer in your application, in your base path  'app/view
 * **signup.ejs:** The view that render the interface to create account on application
 * **email.ejs:** The view that render the interface to sent the email with new password
 * **reset.ejs:** The view that render the interface to reset password with token save in post of the request forgot
+* **mail.html:** The default view with template html to sent email
 
+The default engine template is '.ejs' to render the views
 # Installation
 
 ```
@@ -23,6 +25,11 @@ let iuof = signiuof.Iuof({
     serviceMail: "(Required)the service to send email(e.g: Gmail)",
     loginMail: "(Required)your login of the service of email",
     passMail: "(Required)your password of the service of email",
+    // the template of view send mail
+    view: "(default mail) The name of the view template to send email",
+    rPath: "(default app/views) The base path when your view template is, the root is your own application"
+    ext: "(default html) The extension of the view template"
+    // the routes of this package
     signin: '(default /signin) The request used in the signin',
     signup: '(default /signup) The request used in the signup',
     signout: '(default /signout) The request used in the signout',
