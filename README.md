@@ -20,10 +20,10 @@ $ npm install signiuof
 let signiuof = require('signiuof');
 // Required configurations configs used in the package
 let iuof = signiuof.Iuof({
-    secretAuthToken: (required) The secret string for the token jwt
-    authToken: The array[1,'hour'] with date for expires of the authToken
-    resetToken: The array[1,'hour'] with date for expires of the resetToken
-    appName: '(default Default site) The name of the app',
+    secretAuthToken: "(required) The secret string for the token jwt",
+    authToken: "The array[1,'hour'] with date for expires of the authToken",
+    resetToken: "The array[1,'hour'] with date for expires of the resetToken",
+    appName: "(default Default site) The name of the app",
     // required to enabled the sent of email in reset password
     serviceMail: "(Required)the service to send email(e.g: Gmail)",
     loginMail: "(Required)your login of the service of email",
