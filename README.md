@@ -20,7 +20,10 @@ $ npm install signiuof
 let signiuof = require('signiuof');
 // Required configurations configs used in the package
 let iuof = signiuof.Iuof({
-    appName: '(default Default site) The name of the app',
+    secretAuthToken: "(required) The secret string for the token jwt",
+    authToken: "The array[1,'hour'] with date for expires of the authToken",
+    resetToken: "The array[1,'hour'] with date for expires of the resetToken",
+    appName: "(default Default site) The name of the app",
     // required to enabled the sent of email in reset password
     serviceMail: "(Required)the service to send email(e.g: Gmail)",
     loginMail: "(Required)your login of the service of email",
@@ -86,6 +89,7 @@ The default middlewares use in the package and available for your application to
 * **requireLogin(request,response, next):** The middleware to validate of the user is logged
 * **isVisitant(request,response, next):** The middlware to validate of the user is not logged
 * **requireResetToken(request,response, next):** The middleware to validate of the token is valid
+* **requireAuthToken(request,response, next):** The middleware to load the user by token jwt, and validate the expires this token
 
 #### E.g
 ```javascript
@@ -123,12 +127,13 @@ User.findByEmail('email@test.com', (err, user) => console.log(err, user));
     * **credentials.password:** (string) The passowrd to be found
     * **next:** (function) The callback function called when success and fail
 
-* **findByToken:** Find a user by your token to auth in the app
-    * **token:** (string) The token of the user
-    * **next:** (function) The callback function called when success and fail
-
 * **findByEmail:**
     * **email:** (string) The email of the user
+    * **next:** (function) The callback function called when success and fail
+
+* **findByAuthToken:** Find a user by your token to auth in the app
+    * **token:** (string) The token of the user
+    * **expires:**(int, default false) the expires date, by default not validate
     * **next:** (function) The callback function called when success and fail
 
 * **findByResetToken:** Find a user by your reset token
@@ -153,12 +158,13 @@ User.findByEmail('email@test.com', (err, user) => {
     * **password:** (string) The password of the user
     * **next:** (function) The callback function called when success and fail
 
-* **updateToken:** Update the token and expires date of the load user
+* **updateAuthToken:** Update the token and expires date of the load user
     * **token:** (string) The token to be save of the load user
-    * **expires:** (int) The data of expiration for this token
+    * **expires:** (int, default 1 hour) The data of expiration for this token
     * **next:** (function) The callback function called when success and fail
     
 * **updateResetToken:** Update the reset password token and expires date of the load user
+    * **expires:** (int, default 1 hour) The data of expiration for this token
     * **next:** (function) The callback function called when success and fail
     
 * **updatePasswd:** Update the Password of a load user
