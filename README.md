@@ -20,6 +20,7 @@ $ npm install signiuof
 let signiuof = require('signiuof');
 // Required configurations configs used in the package
 let iuof = signiuof.Iuof({
+    secretAuthToken: 
     appName: '(default Default site) The name of the app',
     // required to enabled the sent of email in reset password
     serviceMail: "(Required)the service to send email(e.g: Gmail)",
