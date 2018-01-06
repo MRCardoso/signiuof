@@ -33,13 +33,13 @@
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.11.0",
+    "colors": "^1.1.2",
     "compression": "^1.7.1",
     "connect-flash": "^0.1.1",
     "dateformat": "^3.0.2",
     "ejs": "^2.5.7",
     "express": "^4.11.2",
     "express-session": "^1.15.6",
-    "fs-extra": "^5.0.0",
     "method-override": "^2.3.10",
     "moment": "^2.9.0",
     "mongoose": "^4.10.4",
@@ -48,7 +48,7 @@
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "postinstall-build": "^5.0.1",
-    "colors": "^1.1.2"
+    "shelljs": "^0.7.8"
   },
   "devDependencies": {
     "open": "0.0.5"
