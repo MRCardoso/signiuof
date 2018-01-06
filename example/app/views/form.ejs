@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title><%= title %></title>
+        <link rel="icon" href="/favicon.png" type="image/x-icon"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="/bower_components/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="/style.css">
+    </head>
+    <body>
+        <div class="text-center" style="margin: 1%;">
+            <a href="/" data-toggle="tooltip" data-placement="left" title="Voltar a home page">
+                <img src="/images/icon.png" class="image-thumb-4" alt="Task-List App" uib-tooltip="Task-List App">
+            </a>
+        </div>
+        <section class="content signin-form" id="signin-form">
+            <% if(messages.length>0) { %>
+                <div class="alert alert-danger alert-dismissible flash" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <ul>
+                        <% for(var i in messages) { %>
+                            <li><%= messages[i] %></li>
+                        <% }%>
+                    </ul>
+                </div>
+            <% } %>
+
+            <% for(var i in success) { %>
+            <div class="alert alert-success alert-dismissible flash" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <strong>Success!</strong> <%= success[i] %>
+            </div>
+            <% }%>            
+            <% if(typeof data != 'undefined') { %>
+                <%- include('partial/'+view+'.ejs', {data: data}); %>
+            <% } else{ %>
+                <%- include('partial/'+view+'.ejs'); %>
+            <% } %>
+        </section>
+
+        <script language="javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+        <script language="javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        
+        <script>
+            $(document).ready(function(){
+                $(".ico-password").on('click', function(e){
+                    var $el = $(this).parent().find("input");
+                    console.log($el);
+                    if( $el.attr('type') == 'password' )
+                    {
+                        $el.attr('type', 'text');
+                        $(this).find('i').removeClass('fa-eye-slash').addClass('fa-eye');
+                    }
+                    else
+                    {
+                        $el.attr('type', 'password');
+                        $(this).find('i').removeClass('fa-eye').addClass('fa-eye-slash');
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

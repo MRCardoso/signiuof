@@ -3,3 +3,6 @@ npm-publish.sh
 node_modules/*
 package-lock.json
 repo-create.sh
+example/config/options.js
+example/public/bower_components
+.DS_Store

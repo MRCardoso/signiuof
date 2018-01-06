@@ -1,9 +1,21 @@
-var base = process.env.INIT_PWD;
-console.log(base);
+let folder = "app/views";
+let fs = require("fs");
+let extra = require("fs-extra");
 
-require('fs').writeFile(`${base}/major.txt`, 'message', err => {  
-    if (err){
-        console.log('LOG-ERR:', err);
-    }
-    console.log('LOG-SUCCESS');
-});
+console.log(require("./lib/utils/helpers").getBasePath(), process.env.PWD);
+// if( require("./lib/utils/helpers").getBasePath() != process.env.PWD ){
+//     if( !fs.existsSync(`../../${folder}`) )
+//     {
+//         console.log("Init Copy");
+//         extra.copy(`./example/${folder}`, `../../${folder}`, function (err) {
+//             if (err) {
+//                 console.log(err);
+//             } else {
+//                 console.log("Copy Success!");
+//             }
+//         });
+//     }
+//     else{
+//         console.log(`Already exists ../../${folder}`);
+//     }
+// }

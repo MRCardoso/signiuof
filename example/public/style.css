@@ -1,0 +1,190 @@
+/*.CodeMirror-selected, .CodeMirror-scroll {background:#CCCCCC !important;}*/
+body{
+    background: #f4F4F4
+}
+.content{
+    padding: 1.5%;
+    background: #FCFFFA;
+    border-top: 1px solid #d2d2d2;
+}
+img{
+    cursor: pointer;
+}
+.image-thumb{
+    margin:auto;
+    height: 200px !important;
+}
+.image-thumb-2{
+    height: 180px !important;
+}
+.image-thumb-3{
+    width: 170px !important;
+    height: 200px !important;
+}
+.image-thumb-4{
+    width: 100px !important;
+    height: 80px !important;
+    /* border: 2px solid #DFDEDD;
+    border-radius: 5px; */
+}
+.image-thumb-5{
+    width: 80px !important;
+    height: 60px !important;
+    /* border: 2px solid #DFDEDD;
+    border-radius: 5px; */
+}
+.navbar-brand{
+    padding: 10px 10px !important;
+}
+.image-sidebar{    
+    width: 35px !important;
+    height: 30px !important;
+    /* border: 2px solid #DFDEDD;
+    border-radius: 5px; */
+}
+.clear{
+    clear: both;
+}
+.dropdown-menu>li a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.42857143;
+    color: #333;
+    white-space: nowrap;
+    text-decoration: none;
+    cursor: pointer;
+}
+.dropdown-menu>li:hover{
+    background: #EDEFED;
+}
+.btn-blue
+{
+    color: #fff;
+    background-color: #6E9FDD;
+    border-color: #6E9FDD;
+}
+.btn-blue:hover,
+.btn-blue:focus, 
+.btn-blue:visited,
+.btn-blue:active{
+    color: #fff;
+    background-color: #5E8FCD;
+    border-color: #5E8FCD;
+}
+.btn-blue-inverse{
+    color: #fff;
+    background-color: #5E8FCD;
+    border-color: #5E8FCD;
+}
+
+.btn-blue-inverse:hover,
+.btn-blue-inverse:focus, 
+.btn-blue-inverse:visited,
+.btn-blue-inverse:active{
+    color: #fff;
+    background-color: #6E9FDD;
+    border-color: #6E9FDD;
+}
+.panel-blue{
+    color: #2F2F2F;
+    border-color: #6E9FDD;
+}
+.panel-blue>.panel-heading{
+    color: #fdfdfd;
+    background-color: #6E9FDD;
+}
+.navbar-blue,
+.navbar-blue .navbar-nav>.open>.dropdown-menu{
+    border-radius: 0;
+    background-color: #5E8FCD;
+    border-color: #5E8FCD;
+}
+.navbar-blue ul>li>a{
+    color: #fff !important;
+}
+.navbar-blue .navbar-nav>li>a:hover, 
+.navbar-blue .navbar-nav>li>a:focus,
+.navbar-blue .navbar-nav>.open>a, 
+.navbar-blue .navbar-nav>.open>a:focus, 
+.navbar-blue .navbar-nav>.open>a:hover,
+.navbar-blue .navbar-nav>.open>a:visited,
+.navbar-blue .navbar-nav>.open>a:active,
+.navbar-blue .navbar-nav>.open>.dropdown-menu>li>a:focus, 
+.navbar-blue .navbar-nav>.open>.dropdown-menu>li>a:hover,
+.navbar-blue .navbar-nav>.open>.dropdown-menu>li>a:visited,
+.navbar-blue .navbar-nav>.open>.dropdown-menu>li>a:active{
+    background-color: #6E9FDD;
+}
+.sign-in-up{
+    float: right;
+    padding-top: 1%;
+    padding-right: 0.4%;    
+}
+.sign-in-up > a,
+.sign-in-up > a:visited, 
+.sign-in-up > a:active, 
+.sign-in-up > a:hover, 
+.sign-in-up > a:focus
+{
+    font-weight: bold;
+    font-size: 1.14em;
+    color: #F5F5F5 !important;
+    text-decoration: none
+}
+.sign-in-up > span{
+    color: #3D6DAB;
+    font-weight: bold;
+    font-size: 1.0em;
+    border-color: #5E8FCD;
+}
+.profile-container{
+    padding-top: 10px !important;
+    height: 50px;
+}
+.profile-container span{
+    padding-top: 15px !important;
+    word-wrap: break-word;
+}
+.profile-container:hover{
+    opacity: 1.0;
+}
+.signin-email > span{
+    font-size: 19px;
+    margin-left: 10%;
+    text-align: center;
+    color: #4F4F4F;
+}
+.signin-email > a{
+    color: #4F4F4F;
+    text-decoration: none;
+}
+.signin-form{
+    width: 30%;
+    margin: auto;
+    border: 1px solid #D2D2D2;
+    border-radius: 4px;
+}
+.signin-option >.signin-option-item{
+    padding: 10px;
+    border:1px solid #E2E2E2;
+    margin-bottom: 6px;
+    border-radius: 4px;
+    text-align: center
+}
+.signin-form-right{
+    float: right;
+    border: 1px solid #D2D2D2;
+    padding: 20px;
+    border-radius: 4px;
+}
+.signin-form-image{
+    float: right
+}
+.signin-form-image > img{
+    width: 540px;
+    border: 1px solid #D2D2D2;
+    padding: 4px;
+    border-radius: 4px;
+}
