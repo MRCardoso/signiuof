@@ -35,6 +35,8 @@ $ npm install signiuof
 
 ## Start with example
 
+Begin your application with this simple example
+
 Copy the basic structure 
 
 ```bash
