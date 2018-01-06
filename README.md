@@ -7,7 +7,7 @@ The idea of this package is, start a web app with login easily, the files in the
 ## Structure
 
 ```bash
-├── app(back-end) here can be stay your controllers and models to serve the front-end with json response
+├── app(back-end)
 │   ├── views
 │   │   ├── partial
 │   │   │   ├── email.ejs
@@ -15,16 +15,16 @@ The idea of this package is, start a web app with login easily, the files in the
 │   │   │   ├── signin.ejs
 │   │   │   ├── signup.ejs
 │   │   ├── form.ejs
-│   │   ├── index.ejs The SPA that render the angular views
+│   │   ├── index.ejs
 │   │   ├── mail.html
-├── config(config db, server,strategies)
+├── config(db, strategies)
 │   ├── express.js
-├── public(front-end) here can be stay the front-end of your app with angular SPA for example
+├── public(front-end)
 │   │   ├── css
 │   │   │   ├── style.css
 │   │   ├── images
 │   │   │   ├── icon.png
-├── server.js
+├── server.js(boot)
 ```
 
 ## Resume
