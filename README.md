@@ -1,11 +1,30 @@
 # A Node package to signin and signup
 
+the idea of this package is, start a app with login by this base
+
+
 When this package is installer in your application, in your base path  'app/views',is copied the following views:
 * **signin.ejs:** The view that render the interface to signin on application
 * **signup.ejs:** The view that render the interface to create account on application
 * **email.ejs:** The view that render the interface to sent the email with new password
 * **reset.ejs:** The view that render the interface to reset password with token save in post of the request forgot
+* **form.ejs:** The main view that render the partials(signin, signup,forgot and reset)
+* **index.ejs:** The main page of your app
 * **mail.html:** The default view with template html to sent email
+
+
+The files in example/app/views will be coped to the folder app/views after the install of this package, is the app/views not exists
+
+```bash
+├── partial
+│   ├── email.ejs
+│   ├── reset.ejs
+│   ├── signin.ejs
+│   ├── signup.ejs
+├── form.ejs
+├── index.ejs
+├── mail.html
+```
 
 The default engine template is '.ejs' to render the views
 # Installation
