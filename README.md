@@ -10,6 +10,19 @@ When this package is installer in your application, in your base path  'app/view
 * **mail.html:** The default view with template html to sent email
 
 
+The files in example/app/views will be coped to the folder app/views after the install of this package
+
+```bash
+|────partial
+│   |──email.ejs
+│   |──reset.ejs
+│   |──signin.ejs
+│   |──signup.ejs
+├── form.ejs
+├── index.ejs
+├── mail.html
+```
+
 The default engine template is '.ejs' to render the views
 # Installation
 
