@@ -42,14 +42,20 @@ The idea of this package is, start a web app with login easily, the files in the
 ## Start with example
 
 Begin your application with this simple example
+#### create manually or run **npm init**
 ```
-// create manually or run **npm init**
 $ echo "{}" >> package.json
-// install package
+```
+#### install package
+```
 $ npm install signiuof
-// Change config/express.js
+```
+#### Change config/express.js
+```
 $ cat config/express.js | awk '{sub(/\.\/example\//, "./"); print $0}' | awk '{sub(/\.\.\/\.\.\/lib\/index/, "signiuof"); print $0}' >> config/express.js
-// run node server
+```
+#### run node server
+``` 
 $ node server
 ```
 
