@@ -35,18 +35,16 @@ $ npm install signiuof
 ## Start with example
 
 Begin your application with this simple example
-
-Copy the basic structure 
-
-```bash
-$ cp -a node_modules/signiuof/example/config ./config && cp -a node_modules/signiuof/example/public ./public && cp node_modules/signiuof/example/server.js .
 ```
-
-Change config/express.js
-```bash
+// create manually or run **npm init**
+$ echo "{}" >> package.json
+// install package
+$ npm install signiuof
+// Change config/express.js
 $ cat config/express.js | awk '{sub(/\.\/example\//, "./"); print $0}' | awk '{sub(/\.\.\/\.\.\/lib\/index/, "signiuof"); print $0}' >> config/express.js
+// run node server
+$ node server
 ```
-
 
 ## Require modules
 
