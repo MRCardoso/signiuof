@@ -1,31 +1,44 @@
 # A Node package to signin and signup
 
-the idea of this package is, start a app with login by this base
+The idea of this package is, start a web app with login easily, the files in the 'example' folder, will be coped to your root folder after the install of this package.
 
-When this package is installer in your application, in your base path  'app/views',is copied the following views:
+**NOTE:** The default engine template is `.ejs` to render the views of app/views
+
+## Structure
+
+```bash
+├── app(back-end) here can be stay your controllers and models to serve the front-end with json response
+│   ├── views
+│   │   ├── partial
+│   │   │   ├── email.ejs
+│   │   │   ├── reset.ejs
+│   │   │   ├── signin.ejs
+│   │   │   ├── signup.ejs
+│   │   ├── form.ejs
+│   │   ├── index.ejs The SPA that render the angular views
+│   │   ├── mail.html
+├── config(config db, server,strategies)
+│   ├── express.js
+├── public(front-end) here can be stay the front-end of your app with angular SPA for example
+│   │   ├── css
+│   │   │   ├── style.css
+│   │   ├── images
+│   │   │   ├── icon.png
+├── server.js
+```
+
+## Resume
+
 * **signin.ejs:** The view that render the interface to signin on application
 * **signup.ejs:** The view that render the interface to create account on application
 * **email.ejs:** The view that render the interface to sent the email with new password
 * **reset.ejs:** The view that render the interface to reset password with token save in post of the request forgot
 * **form.ejs:** The main view that render the partials(signin, signup,forgot and reset)
 * **index.ejs:** The main page of your app
-* **mail.html:** The default view with template html to sent email
+* **express.js:** The basic configuration of the server to work the session, authentication, post data and flash
+* **server.js:** The script that start the node server
+* **style.css:** The specific styles of the views
 
-
-The files in example/app/views will be coped to the folder app/views after the install of this package.
-
-```bash
-├── partial
-│   ├── email.ejs
-│   ├── reset.ejs
-│   ├── signin.ejs
-│   ├── signup.ejs
-├── form.ejs
-├── index.ejs
-├── mail.html
-```
-
-The default engine template is '.ejs' to render the views
 # Installation
 
 ```
