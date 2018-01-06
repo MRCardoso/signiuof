@@ -2,7 +2,6 @@
 
 the idea of this package is, start a app with login by this base
 
-
 When this package is installer in your application, in your base path  'app/views',is copied the following views:
 * **signin.ejs:** The view that render the interface to signin on application
 * **signup.ejs:** The view that render the interface to create account on application
@@ -13,7 +12,7 @@ When this package is installer in your application, in your base path  'app/view
 * **mail.html:** The default view with template html to sent email
 
 
-The files in example/app/views will be coped to the folder app/views after the install of this package, is the app/views not exists
+The files in example/app/views will be coped to the folder app/views after the install of this package.
 
 ```bash
 ├── partial
@@ -65,8 +64,8 @@ let iuof = signiuof.Iuof({
     passMail: "(Required)your password of the service of email",
     // the template of view send mail
     view: "(default mail) The name of the view template to send email",
-    rPath: "(default app/views) The base path when your view template is, the root is your own application"
-    ext: "(default html) The extension of the view template"
+    rPath: "(default app/views) The base path when your view template is, the root is your own application",
+    ext: "(default html) The extension of the view template",
     // the routes of this package
     signin: '(default /signin) The request used in the signin',
     signup: '(default /signup) The request used in the signup',
@@ -129,6 +128,49 @@ The default middlewares use in the package and available for your application to
 #### E.g
 ```javascript
 app.route('/api/users').get(iuof.middlewares.requireLogin, user.list);
+```
+
+### helpers(helper)
+
+The helpers used in this package and available for your application
+
+* **getErrorMessage(err,noTags, isString):** Method to returns the error ocurred in the backend node server
+    * **err:** (object|string) The error was ocurred
+    * **nobr:** (bool default true) add br tag html in errors returned
+    * **isString:** define the return of the errors a array or a string
+
+* **sendMail(data, next, credentials):** Method to send email with nodemailer
+    * **data:** (object) Object with data to be sent
+    * **data.mail:** (string) The email destiny
+    * **data.subject:** (string) The subject of the email
+    * **data.content:** (string) The body of the email
+    * **data.title:** (string) The title of the email
+    * **data.annex:** (object) The object with **name** and **path** of the annex file
+    * **next:** (function) The callback function called when success and fail
+    * **credentials:** Object the service of email
+    * **credentials.serviceMail:** (string) The service of email(e.g: Gmail)
+    * **credentials.loginMail:** (string) The login of your account
+    * **credentials.passMail:** (string) The password of your account
+    
+#### E.g
+```javascript
+// prepare erros
+iuof.helpers.getErrorMessage({error: [{message: "something bad"}]});
+// send mail
+iuof.helpers.sendMail({
+    mail: "destiny address",
+    subject: "your subject",
+    content: "your content",
+    title: "your title",
+    annex: {
+        path: "/path/to/file",
+        name: "the name of the file"
+    }
+}, (err, info) => console.log(err, info), {
+    serviceMail: "(Required)the service to send email(e.g: Gmail)",
+    loginMail: "(Required)your login of the service of email",
+    passMail: "(Required)your password of the service of email",
+})
 ```
 
 ## User(default model)
