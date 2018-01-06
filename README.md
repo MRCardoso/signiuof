@@ -13,11 +13,11 @@ When this package is installer in your application, in your base path  'app/view
 The files in example/app/views will be coped to the folder app/views after the install of this package
 
 ```bash
-|── partial
-│   |──email.ejs
-│   |──reset.ejs
-│   |──signin.ejs
-│   |──signup.ejs
+├── partial
+│   ├── email.ejs
+│   ├── reset.ejs
+│   ├── signin.ejs
+│   ├── signup.ejs
 ├── form.ejs
 ├── index.ejs
 ├── mail.html
