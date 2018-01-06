@@ -5,7 +5,10 @@ When this package is installer in your application, in your base path  'app/view
 * **signup.ejs:** The view that render the interface to create account on application
 * **email.ejs:** The view that render the interface to sent the email with new password
 * **reset.ejs:** The view that render the interface to reset password with token save in post of the request forgot
+* **form.ejs:** The main view that render the partials(signin, signup,forgot and reset)
+* **index.ejs:** The main page of your app
 * **mail.html:** The default view with template html to sent email
+
 
 The default engine template is '.ejs' to render the views
 # Installation
