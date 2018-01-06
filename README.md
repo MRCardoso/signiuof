@@ -1,5 +1,8 @@
 # A Node package to signin and signup
 
+the idea of this package is, start a app with login by this base
+
+
 When this package is installer in your application, in your base path  'app/views',is copied the following views:
 * **signin.ejs:** The view that render the interface to signin on application
 * **signup.ejs:** The view that render the interface to create account on application
