@@ -1,6 +1,5 @@
-let folder = "app/views";
-let origin = `./example/${folder}/`;
-let destination = `../../${folder}/`;
+let origin = `./example/`;
+let destination = `../../`;
 let fs = require("fs");
 let shelljs = require("shelljs");
 require('colors');
@@ -26,14 +25,16 @@ if( require("./lib/utils/helpers").getBasePath() != process.env.PWD )
     itens.forEach(i =>
     {
         let f = (i.destiny != "" ? destination+i.destiny : destination);
+        let o = (i.destiny != "" ? origin+i.destiny : origin);
         let d = `${f}${i.file}`;
+        
         if( !fs.existsSync(d))
         {
             if(!fs.existsSync(f)){
                 shelljs.mkdir("-p",f);
             }
         
-            fs.copyFile(`${origin}${f}${i.file}`, d, err =>{
+            fs.copyFile(`${o}${i.file}`, d, err =>{
                 if (err) {
                     console.log("erro in copy the files, try to copy manually the folder 'example/app'".red,err);
                 } else {
