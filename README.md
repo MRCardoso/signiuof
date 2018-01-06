@@ -39,12 +39,6 @@ The idea of this package is, start a web app with login easily, the files in the
 * **server.js:** The script that start the node server
 * **style.css:** The specific styles of the views
 
-# Installation
-
-```
-$ npm install signiuof
-```
-
 ## Start with example
 
 Begin your application with this simple example
@@ -57,6 +51,12 @@ $ npm install signiuof
 $ cat config/express.js | awk '{sub(/\.\/example\//, "./"); print $0}' | awk '{sub(/\.\.\/\.\.\/lib\/index/, "signiuof"); print $0}' >> config/express.js
 // run node server
 $ node server
+```
+
+# Installation
+
+```
+$ npm install signiuof
 ```
 
 ## Require modules
