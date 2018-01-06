@@ -59,6 +59,8 @@ $ cat config/express.js | awk '{sub(/\.\/example\//, "./"); print $0}' | awk '{s
 $ node server
 ```
 
+----
+
 # Installation
 
 ```
