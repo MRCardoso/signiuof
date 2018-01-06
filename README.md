@@ -33,6 +33,20 @@ The default engine template is '.ejs' to render the views
 $ npm install signiuof
 ```
 
+## Start with example
+
+Copy the basic structure 
+
+```bash
+$ cp -a node_modules/signiuof/example/config ./config && cp -a node_modules/signiuof/example/public ./public && cp node_modules/signiuof/example/server.js .
+```
+
+Change config/express.js
+```bash
+$ cat config/express.js | awk '{sub(/\.\/example\//, "./"); print $0}' | awk '{sub(/\.\.\/\.\.\/lib\/index/, "signiuof"); print $0}' >> config/express.js
+```
+
+
 ## Require modules
 
 ```javascript
