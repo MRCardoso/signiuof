@@ -10,7 +10,7 @@ When this package is installer in your application, in your base path  'app/view
 * **mail.html:** The default view with template html to sent email
 
 
-The files in example/app/views will be coped to the folder app/views after the install of this package
+The files in example/app/views will be coped to the folder app/views after the install of this package, is the app/views not exists
 
 ```bash
 ├── partial
