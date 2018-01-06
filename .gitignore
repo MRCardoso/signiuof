@@ -6,3 +6,6 @@ repo-create.sh
 example/config/options.js
 example/public/bower_components
 .DS_Store
+example/app/.DS_Store
+example/app/views/.DS_Store
+example/config/.DS_Store

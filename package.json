@@ -47,7 +47,8 @@
     "nodemailer": "^4.4.1",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
-    "postinstall-build": "^5.0.1"
+    "postinstall-build": "^5.0.1",
+    "colors": "^1.1.2"
   },
   "devDependencies": {
     "open": "0.0.5"
