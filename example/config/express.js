@@ -81,7 +81,7 @@ module.exports = function()
     passport.use(new LocalStrategy((username, password, done) => {
         User.findAndAuthenticate({username: username, password:password}, (err, user) =>{
             if(err){                
-                return done(null,false, require("../../lib/utils/helpers").getErrorMessage(err));
+                return done(null,false, iuof.helpers.getErrorMessage(err));
             }
             return done(null,user);
         });
