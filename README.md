@@ -1,52 +1,71 @@
 # A Node package to signin and signup
 
-the idea of this package is, start a app with login by this base
+The idea of this package is, start a web app with login easily, the files in the 'example' folder, will be coped to your root folder after the install of this package.
 
-When this package is installer in your application, in your base path  'app/views',is copied the following views:
+**NOTE:** The default engine template is `.ejs` to render the views of app/views
+
+## Structure
+
+```bash
+├── app(back-end)
+│   ├── views
+│   │   ├── partial
+│   │   │   ├── email.ejs
+│   │   │   ├── reset.ejs
+│   │   │   ├── signin.ejs
+│   │   │   ├── signup.ejs
+│   │   ├── form.ejs
+│   │   ├── index.ejs
+│   │   ├── mail.html
+├── config(db, strategies)
+│   ├── express.js
+├── public(front-end)
+│   │   ├── css
+│   │   │   ├── style.css
+│   │   ├── images
+│   │   │   ├── icon.png
+├── server.js(boot)
+```
+
+## Resume
+
 * **signin.ejs:** The view that render the interface to signin on application
 * **signup.ejs:** The view that render the interface to create account on application
 * **email.ejs:** The view that render the interface to sent the email with new password
 * **reset.ejs:** The view that render the interface to reset password with token save in post of the request forgot
 * **form.ejs:** The main view that render the partials(signin, signup,forgot and reset)
 * **index.ejs:** The main page of your app
-* **mail.html:** The default view with template html to sent email
+* **express.js:** The basic configuration of the server to work the session, authentication, post data and flash
+* **server.js:** The script that start the node server
+* **style.css:** The specific styles of the views
 
+## Start with example
 
-The files in example/app/views will be coped to the folder app/views after the install of this package.
-
-```bash
-├── partial
-│   ├── email.ejs
-│   ├── reset.ejs
-│   ├── signin.ejs
-│   ├── signup.ejs
-├── form.ejs
-├── index.ejs
-├── mail.html
+Begin your application with this simple example
+#### create manually or run **npm init**
+```
+$ echo "{}" >> package.json
+```
+#### install package
+```
+$ npm install signiuof
+```
+#### Change config/express.js
+```
+$ cat config/express.js | awk '{sub(/\.\/example\//, "./"); print $0}' | awk '{sub(/\.\.\/\.\.\/lib\/index/, "signiuof"); print $0}' >> config/express.js
+```
+#### run node server
+``` 
+$ node server
 ```
 
-The default engine template is '.ejs' to render the views
+----
+
 # Installation
 
 ```
 $ npm install signiuof
 ```
-
-## Start with example
-
-Begin your application with this simple example
-
-Copy the basic structure 
-
-```bash
-$ cp -a node_modules/signiuof/example/config ./config && cp -a node_modules/signiuof/example/public ./public && cp node_modules/signiuof/example/server.js .
-```
-
-Change config/express.js
-```bash
-$ cat config/express.js | awk '{sub(/\.\/example\//, "./"); print $0}' | awk '{sub(/\.\.\/\.\.\/lib\/index/, "signiuof"); print $0}' >> config/express.js
-```
-
 
 ## Require modules
 
