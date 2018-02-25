@@ -254,11 +254,18 @@ User.findByEmail('email@test.com', (err, user) => {
     * **password:** (string) The password of the user
     * **next:** (function) The callback function called when success and fail
 
-* **updateAuthToken:** Update the token and expires date of the load user
-    * **token:** (string) The token to be save of the load user
-    * **expires:** (int, default 1 hour) The data of expiration for this token
+* **createApiToken:** Create a new token in the foreign table(user_api) for authenticated user by jwt
+    * **params** the data to be create a new api authentication
+    * **params.token** the token to be save of the load user
+    * **[params.expires=Date.now() + 3600000]** the data of expiration for this token
+    * **params.name** the name of the origin to be create auth
+    * **params.platform** the origin type to be create auth
+    * **[params.version='']** the origin version to be create auth
     * **next:** (function) The callback function called when success and fail
     
+* **removeApiToken:** Remove the token created in signin for authenticated user by jwt
+    * **next:** (function) The callback function called when success and fail
+
 * **updateResetToken:** Update the reset password token and expires date of the load user
     * **expires:** (int, default 1 hour) The data of expiration for this token
     * **next:** (function) The callback function called when success and fail
